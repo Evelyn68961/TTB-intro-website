@@ -1,0 +1,121 @@
+.ttb-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.ttb-article {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 40px 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, sans-serif;
+  color: #1a202c;
+  line-height: 1.7;
+}
+
+.ttb-article h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 3.5px solid rgba(30, 58, 95, 0.9);
+}
+
+.ttb-article section {
+  background-color: #fffefb;
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.ttb-article h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.ttb-article p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.ttb-article em {
+  color: #4a5568;
+}
+
+.ttb-article strong {
+  color: #1e3a5f;
+}
+
+/* Table styling */
+.ttb-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 1rem;
+}
+
+.ttb-article th {
+  text-align: left;
+  padding: 12px 16px;
+  background-color: #1e3a5f;
+  color: white;
+  font-weight: 600;
+}
+
+.ttb-article td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ttb-article tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Lists */
+.ttb-article ul {
+  padding-left: 24px;
+  margin: 16px 0;
+}
+
+.ttb-article li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* Definition list for "When TTB Matters Most" */
+.ttb-article dl {
+  margin: 20px 0;
+}
+
+.ttb-article dt {
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+.ttb-article dd {
+  margin-left: 0;
+  padding-left: 20px;
+  border-left: 4px solid rgba(30, 58, 95, 0.7);
+  color: #4a5568;
+}
+
+/* Highlight box for key concepts */
+.highlight-box {
+  background-color: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.highlight-box p {
+  margin: 0;
+}

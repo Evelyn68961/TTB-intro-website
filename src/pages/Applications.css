@@ -1,0 +1,197 @@
+.applications-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, sans-serif;
+  color: #1a202c;
+  line-height: 1.7;
+}
+
+/* Page header */
+.page-header {
+  max-width: 60%;
+  margin: 0 auto 40px;
+  padding: 40px 24px 0 24px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 8px;
+  padding-bottom: 16px;
+  border-bottom: 3.5px solid rgba(30, 58, 95, 0.9);
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Main content wrapper */
+.applications-content {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.applications-content p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.applications-content strong {
+  color: #1e3a5f;
+}
+
+/* Medication sections */
+.medication-section {
+  background-color: #fffefb;
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.medication-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+/* Context paragraph */
+.context {
+  color: #4a5568;
+  font-style: italic;
+}
+
+/* TTB Results box */
+.ttb-results {
+  background-color: transparent;
+  padding: 24px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.ttb-results h3 {
+  font-size: 1.1rem;
+  color: #1e3a5f;
+  margin: 0 0 16px 0;
+}
+
+.ttb-results.emerging {
+  background-color: #fefce8;
+  border: 1px solid #fde047;
+}
+
+/* Source citation */
+.source {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* Table */
+.applications-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 1rem;
+}
+
+.applications-content th {
+  text-align: left;
+  padding: 12px 16px;
+  background-color: #1e3a5f;
+  color: white;
+  font-weight: 600;
+}
+
+.applications-content td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.applications-content tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Clinical implication */
+.clinical-implication {
+  background-color: #f8fafc;
+  border-left: 4px solid rgba(30, 58, 95, 0.7);
+  padding: 16px 20px;
+  margin: 20px 0 0 0;
+}
+
+/* Lists */
+.applications-content ul {
+  padding-left: 24px;
+  margin: 16px 0;
+}
+
+.applications-content li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* Guidance section */
+.guidance-section {
+  background-color: #fffefb;
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.guidance-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-bottom: 24px;
+}
+
+.guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.guidance-card {
+  background-color: #fbfcfd;
+  padding: 24px;
+  border-radius: 12px;
+  /* border: 1px solid rgba(30, 58, 95, 0.7); */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.guidance-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin: 0 0 12px 0;
+}
+
+.guidance-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-header,
+  .applications-content {
+    max-width: 90%;
+  }
+
+  .guidance-grid {
+    grid-template-columns: 1fr;
+  }
+}

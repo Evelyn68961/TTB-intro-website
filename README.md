@@ -1,16 +1,38 @@
-# React + Vite
+# Time-to-Benefit (TTB) Educational Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive website introducing Time-to-Benefit analysis — a framework that answers the question: "How long do patients need to take a medication before it helps?"
 
-Currently, two official plugins are available:
+## What is TTB?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Traditional clinical trials tell us whether a treatment works, but not how long patients must take it before experiencing benefit. TTB analysis fills this gap, helping clinicians and patients make informed decisions, especially for:
 
-## React Compiler
+- Older adults with limited life expectancy
+- Expensive or high-burden medications
+- Shared decision-making conversations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **What is TTB?** — Core concepts and clinical rationale
+- **Methodology** — Step-by-step explanation of TTB calculation
+- **Clinical Applications** — Published TTB estimates for statins, bisphosphonates, colchicine, SGLT2i, and intensive BP treatment
+- **Interactive Demo** — Visualize survival curves and TTB thresholds
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built with
+
+- React 18
+- Vite
+- CSS
+
+## Run locally
+```bash
+npm install
+npm run dev
+```
+
+## References
+
+- Yourman et al., JAMA Internal Medicine 2021 (Statins)
+- Deardorff et al., JAMA Internal Medicine 2022 (Bisphosphonates)
+- Chen et al., JAMA Internal Medicine 2022 (Intensive BP)
+- Chen et al., JAMA Network Open 2023 (SGLT2i)
+- Zhou et al., Heliyon 2024 (Colchicine)

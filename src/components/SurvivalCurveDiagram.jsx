@@ -1,18 +1,5 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import './SurvivalCurveDiagram.css';
-
-/*
- * SurvivalCurveDiagram.jsx — v2 (fixed)
- * 
- * KEY FIX from v1: 
- * - Treatment curve is ABOVE control (higher survival = treatment works)
- * - Treatment = dashed orange line, Control = solid blue line
- *   This matches standard KM plot conventions from Evelyn's slides
- * - Shaded area fills the ENTIRE gap between curves
- * - ARR bracket annotation at the TTB point with S(t) values labeled
- * - Weibull params tuned so the gap is clearly visible at 80-100% scale
- * - 24-month x-axis matching the presentation slide
- */
 
 const SHAPE = 1.15;
 const SCALE_CONTROL = 72;
@@ -46,9 +33,9 @@ function survivalToY(s) {
   return PLOT_BOTTOM - fraction * PLOT_HEIGHT;
 }
 
-const THRESHOLDS = [
+export const THRESHOLDS = [
   { arr: 0.005, label: '0.5%', nnt: 200, color: '#93c5fd' },
-  { arr: 0.01,  label: '1.0%', nnt: 100, color: '#60a5fa ' },
+  { arr: 0.01,  label: '1.0%', nnt: 100, color: '#60a5fa' },
   { arr: 0.02,  label: '2.0%', nnt: 50,  color: '#3b82f6' },
 ];
 

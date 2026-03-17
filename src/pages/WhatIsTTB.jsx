@@ -1,14 +1,9 @@
 import { useState } from 'react';
-import SurvivalCurveDiagram from '../components/SurvivalCurveDiagram';
+import SurvivalCurveDiagram, { THRESHOLDS } from '../components/SurvivalCurveDiagram';
 import './WhatIsTTB.css';
 
 export default function WhatIsTTB() {
     const [selectedIdx, setSelectedIdx] = useState(1);
-    const THRESHOLDS = [
-        { arr: 0.005, label: '0.5%', nnt: 200, color: '#93c5fd' },
-        { arr: 0.01,  label: '1.0%', nnt: 100, color: '#60a5fa ' },
-        { arr: 0.02,  label: '2.0%', nnt: 50,  color: '#3b82f6' },
-    ];
     const selected = THRESHOLDS[selectedIdx];
   return (
     <div className="ttb-page">

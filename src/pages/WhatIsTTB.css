@@ -119,3 +119,26 @@
 .highlight-box p {
   margin: 0;
 }
+
+.ttb-measure-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.ttb-measure-layout > :first-child {
+  flex: 1 1 60%;
+}
+
+.ttb-measure-layout > :last-child {
+  flex: 1 1 35%;
+  padding-top: 80px;
+  padding-right: 40px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .ttb-measure-layout {
+    flex-direction: column;
+  }
+}

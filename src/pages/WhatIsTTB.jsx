@@ -1,6 +1,15 @@
+import { useState } from 'react';
+import SurvivalCurveDiagram from '../components/SurvivalCurveDiagram';
 import './WhatIsTTB.css';
 
 export default function WhatIsTTB() {
+    const [selectedIdx, setSelectedIdx] = useState(1);
+    const THRESHOLDS = [
+        { arr: 0.005, label: '0.5%', nnt: 200, color: '#93c5fd' },
+        { arr: 0.01,  label: '1.0%', nnt: 100, color: '#60a5fa ' },
+        { arr: 0.02,  label: '2.0%', nnt: 50,  color: '#3b82f6' },
+    ];
+    const selected = THRESHOLDS[selectedIdx];
   return (
     <div className="ttb-page">
         <article className="ttb-article">
@@ -55,33 +64,52 @@ export default function WhatIsTTB() {
             before 1 in 100 patients will have avoided a cardiovascular event they
             would have otherwise experienced."
             </p>
-            <p>Common ARR thresholds used in TTB research:</p>
-            <table>
-            <thead>
-                <tr>
-                <th>Threshold</th>
-                <th>Interpretation</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>0.5% ARR</td>
-                <td>1 in 200 patients benefits</td>
-                </tr>
-                <tr>
-                <td>1.0% ARR</td>
-                <td>1 in 100 patients benefits</td>
-                </tr>
-                <tr>
-                <td>2.0% ARR</td>
-                <td>1 in 50 patients benefits</td>
-                </tr>
-            </tbody>
-            </table>
-            <p>
-            The choice of threshold depends on the clinical context — how serious is
-            the outcome being prevented? What are the treatment burdens?
-            </p>
+            <div className="ttb-measure-layout">
+                <div>
+                    <SurvivalCurveDiagram 
+                        selectedIdx={selectedIdx} 
+                        setSelectedIdx={setSelectedIdx} 
+                    />
+                </div>
+                <div>
+                    <p>Common ARR thresholds used in TTB research:</p>
+                    <table>
+                    <thead>
+                        <tr>
+                        <th>Threshold</th>
+                        <th>Interpretation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>0.5% ARR</td>
+                        <td>1 in 200 patients benefits</td>
+                        </tr>
+                        <tr>
+                        <td>1.0% ARR</td>
+                        <td>1 in 100 patients benefits</td>
+                        </tr>
+                        <tr>
+                        <td>2.0% ARR</td>
+                        <td>1 in 50 patients benefits</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <div className="ttb-result-callout" style={{ borderColor: selected.color, marginTop: '40px' }}>
+                        <p>
+                            At the <strong style={{ color: selected.color }}>{selected.label} ARR</strong> threshold,
+                            treatment prevents 1 event per {selected.nnt} patients.
+                        </p>
+                    </div>
+                    <div style={{marginTop: '40px'}}>
+                       <p>
+                            The choice of threshold depends on the clinical context — how serious is
+                            the outcome being prevented? What are the treatment burdens?
+                       </p> 
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <section>
